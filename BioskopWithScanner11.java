@@ -47,7 +47,14 @@ public class BioskopWithScanner11 {
                 }
             } else if (menu == 2) {
                 for (int i = 0; i < penonton.length; i++) {
-                    System.out.printf("%s \t %s\n", penonton[i][0], penonton[i][1]);
+                    for (int j = 0; j < penonton[i].length; j++) {
+                        if (penonton[i][j] == null) {
+                            System.out.print("***" + "\t");
+                        } else {
+                            System.out.print(penonton[i][j] + "\t");
+                        }
+                    }
+                    System.out.println();
                 }
             } else if (menu == 3) {
                 break;
